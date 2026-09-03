@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АлмАнг — школа английского языка в Алматы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12211c;
+  --ink-soft:#41544c;
+  --paper:#f6f4ec;
+  --paper-2:#efece1;
+  --moss:#1f5c46;
+  --moss-deep:#153f31;
+  --amber:#e0a94b;
+  --line:#d8d3c4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,244,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{font-family:'Fraunces',serif;font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--moss-deep)}
+.brand span{color:var(--amber)}
+.menu{display:flex;gap:34px;align-items:center}
+.menu a{font-size:15px;color:var(--ink-soft);transition:color .2s}
+.menu a:hover{color:var(--moss)}
+.btn{display:inline-block;background:var(--moss);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--moss-deep);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--moss);border:1.5px solid var(--moss)}
+.btn-ghost:hover{background:var(--moss);color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.burger span{width:24px;height:2px;background:var(--ink)}
+
+/* hero */
+.hero{padding:88px 0 96px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:14px;color:var(--moss);font-weight:600;margin-bottom:22px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--amber)}
+.hero h1{font-size:clamp(44px,6vw,72px);color:var(--ink)}
+.hero h1 em{font-style:italic;color:var(--moss)}
+.hero p.lead{font-size:19px;color:var(--ink-soft);margin:26px 0 34px;max-width:32ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;margin-top:52px}
+.stat b{font-family:'Fraunces',serif;font-size:38px;font-weight:600;color:var(--moss-deep);display:block}
+.stat small{font-size:14px;color:var(--ink-soft)}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:22px;background:linear-gradient(160deg,var(--moss),var(--moss-deep));overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,63,49,.6)}
+.hero-art .ring{position:absolute;border:1.5px solid rgba(224,169,75,.35);border-radius:50%}
+.hero-art .r1{width:340px;height:340px;top:-90px;right:-90px}
+.hero-art .r2{width:220px;height:220px;bottom:-60px;left:-50px;border-color:rgba(255,255,255,.14)}
+.hero-art .word{position:absolute;font-family:'Fraunces',serif;color:rgba(255,255,255,.92);font-size:clamp(50px,7vw,88px);font-weight:400;font-style:italic;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.hero-art .word small{display:block;font-family:'Manrope';font-style:normal;font-size:16px;letter-spacing:.4em;color:var(--amber);margin-top:14px;text-transform:uppercase}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{max-width:44ch;margin-bottom:52px}
+.sec-head h2{font-size:clamp(32px,4.4vw,46px)}
+.sec-head p{color:var(--ink-soft);font-size:18px;margin-top:16px}
+
+/* services */
+.services{background:var(--paper-2)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.svc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px 32px;transition:border-color .25s,transform .25s}
+.svc:hover{border-color:var(--moss);transform:translateY(-3px)}
+.svc .tag{font-size:13px;font-weight:700;color:var(--amber);letter-spacing:.02em}
+.svc h3{font-size:25px;margin:12px 0 10px}
+.svc p{color:var(--ink-soft);font-size:15.5px}
+.svc ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:9px}
+.svc li{font-size:15px;color:var(--ink);padding-left:24px;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border:2px solid var(--moss);border-top:none;border-right:none;transform:rotate(-45deg)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.about-art{aspect-ratio:1;border-radius:20px;background:
+  radial-gradient(circle at 30% 30%,var(--amber),transparent 55%),
+  linear-gradient(150deg,var(--moss),var(--moss-deep));position:relative;overflow:hidden}
+.about-art .badge{position:absolute;bottom:26px;left:26px;background:var(--paper);border-radius:14px;padding:18px 22px}
+.about-art .badge b{font-family:'Fraunces';font-size:32px;color:var(--moss-deep);display:block;line-height:1}
+.about-art .badge small{font-size:13px;color:var(--ink-soft)}
+.about-text h2{font-size:clamp(30px,4vw,44px);margin-bottom:22px}
+.about-text p{color:var(--ink-soft);font-size:17px;margin-bottom:18px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-top:30px}
+.feat div b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+.feat div span{font-size:14.5px;color:var(--ink-soft)}
+
+/* pricing */
+.pricing{background:var(--moss-deep);color:#fff}
+.pricing .sec-head h2{color:#fff}
+.pricing .sec-head p{color:rgba(255,255,255,.7)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:34px 30px;position:relative}
+.price.pop{background:var(--paper);color:var(--ink)}
+.price.pop .flag{position:absolute;top:-13px;left:30px;background:var(--amber);color:var(--moss-deep);font-size:12px;font-weight:700;padding:5px 14px;border-radius:999px}
+.price h3{font-size:23px;margin-bottom:6px}
+.price .amt{font-family:'Fraunces';font-size:40px;font-weight:600;margin:14px 0 4px}
+.price .amt small{font-family:'Manrope';font-size:15px;font-weight:500;opacity:.7}
+.price .per{font-size:14px;opacity:.7;margin-bottom:22px}
+.price ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px}
+.price li{font-size:15px;padding-left:24px;position:relative;opacity:.92}
+.price li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-weight:700}
+.price.pop li::before{color:var(--moss)}
+.price .btn{width:100%;text-align:center;background:var(--amber);color:var(--moss-deep)}
+.price .btn:hover{background:#d29a3a}
+.price.pop .btn{background:var(--moss);color:#fff}
+.note{text-align:center;margin-top:26px;font-size:14px;color:rgba(255,255,255,.6)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-text h2{font-size:clamp(30px,4vw,44px);margin-bottom:20px}
+.contact-text p{color:var(--ink-soft);font-size:17px;margin-bottom:30px}
+.info{display:flex;flex-direction:column;gap:22px}
+.info-row{display:flex;gap:16px;align-items:flex-start}
+.info-row .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--paper-2);display:grid;place-items:center;color:var(--moss)}
+.info-row b{display:block;font-size:16px}
+.info-row span,.info-row a{color:var(--ink-soft);font-size:15.5px}
+.info-row a:hover{color:var(--moss)}
+form{background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:34px}
+form label{display:block;font-size:14px;font-weight:600;margin:0 0 7px}
+form input,form select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:11px;background:var(--paper);font-family:inherit;font-size:15px;margin-bottom:18px;color:var(--ink)}
+form input:focus,form select:focus{outline:none;border-color:var(--moss)}
+form .btn{width:100%;text-align:center;border:none;cursor:pointer}
+.form-ok{display:none;color:var(--moss);font-weight:600;margin-top:14px;font-size:15px}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:44px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.foot .brand{color:#fff}
+.foot small{font-size:14px}
+
+@media(max-width:860px){
+  .menu{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 28px;gap:20px}
+  .menu.open{display:flex}
+  .burger{display:flex}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .hero-art{max-width:400px}
+  .svc-grid,.price-grid,.feat{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">Alm<span>Ang</span></a>
+    <nav class="menu" id="menu">
+      <a href="#services">Услуги</a>
+      <a href="#about">О школе</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contact">Контакты</a>
+      <a href="#contact" class="btn">Записаться</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Школа английского языка · Алматы</span>
+      <h1>Английский, который <em>остаётся</em> с вами</h1>
+      <p class="lead">Индивидуальные, групповые и онлайн-занятия для взрослых. Подготовка к IELTS и TOEFL с преподавателями, которые проходят обучение и подтверждают квалификацию сертификатами.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Записаться на пробное</a>
+        <a href="#pricing" class="btn btn-ghost">Посмотреть цены</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>10+</b><small>лет опыта</small></div>
+        <div class="stat"><b>4</b><small>формата обучения</small></div>
+        <div class="stat"><b>IELTS<br>TOEFL</b><small>подготовка к экзаменам</small></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="word">Speak<small>with confidence</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Форматы обучения</h2>
+      <p>Выбирайте темп и формат под свою цель — от индивидуальной работы один на один до подготовки к международным экзаменам.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="tag">Один на один</span>
+        <h3>Индивидуальные занятия</h3>
+        <p>Программа полностью под ваш уровень, цель и график. Максимум внимания и разговорной практики на каждом уроке.</p>
+        <ul><li>Гибкое расписание</li><li>Персональный план</li><li>Быстрый прогресс</li></ul>
+      </div>
+      <div class="svc">
+        <span class="tag">В мини-группе</span>
+        <h3>Групповые занятия</h3>
+        <p>Небольшие группы взрослых с близким уровнем. Живое общение, командные задания и мотивация учиться вместе.</p>
+        <ul><li>До 6 человек в группе</li><li>Разговорная практика</li><li>Доступная цена</li></ul>
+      </div>
+      <div class="svc">
+        <span class="tag">Из любой точки</span>
+        <h3>Онлайн-обучение</h3>
+        <p>Те же преподаватели и программы, но без привязки к месту. Удобная платформа и материалы всегда под рукой.</p>
+        <ul><li>Занятия по видеосвязи</li><li>Запись уроков</li><li>Материалы онлайн</li></ul>
+      </div>
+      <div class="svc">
+        <span class="tag">Экзамены</span>
+        <h3>Подготовка к IELTS и TOEFL</h3>
+        <p>Отработка всех секций экзамена, пробные тесты и стратегии. Готовим к целевому баллу уверенно и по плану.</p>
+        <ul><li>Reading · Listening · Writing · Speaking</li><li>Пробные экзамены</li><li>Разбор ошибок</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-art">
+      <div class="badge"><b>10+</b><small>лет учим английскому</small></div>
+    </div>
+    <div class="about-text">
+      <h2>О школе АлмАнг</h2>
+      <p>Более десяти лет мы помогаем взрослым в Алматы заговорить на английском — уверенно и без страха ошибиться. За это время у нас сложился подход, который работает: внимание к каждому ученику и опыт, накопленный за годы практики.</p>
+      <p>Все преподаватели имеют действующие сертификаты и регулярно проходят обучение, чтобы подтверждать и повышать квалификацию. Мы строим занятия вокруг вашей цели, а не вокруг учебника.</p>
+      <div class="feat">
+        <div><b>Индивидуальный подход</b><span>Программа под ваш уровень и цель</span></div>
+        <div><b>Сертифицированные педагоги</b><span>Действующие сертификаты и постоянное обучение</span></div>
+        <div><b>Опыт более 10 лет</b><span>Отработанная методика преподавания</span></div>
+        <div><b>4 формата</b><span>Индивидуально, в группе, онлайн, экзамены</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Цены на обучение</h2>
+      <p>Прозрачная стоимость без скрытых платежей. Точные цифры уточняйте — цены ниже указаны как ориентир.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price">
+        <h3>Групповые</h3>
+        <div class="amt">26 000 ₸<small></small></div>
+        <div class="per">в месяц · от 8 занятий по 60–90 минут</div>
+        <ul><li>Мини-группа до 6 человек</li><li>2 занятия в неделю</li><li>Учебные материалы</li></ul>
+        <a href="#contact" class="btn">Записаться</a>
+      </div>
+      <div class="price pop">
+        <span class="flag">Популярно</span>
+        <h3>Индивидуальные</h3>
+        <div class="amt">от 46 000 ₸<small></small></div>
+        <div class="per">в месяц · от 8 занятий по 60–90 минут</div>
+        <ul><li>Один на один с преподавателем</li><li>Гибкий график</li><li>Персональная программа</li></ul>
+        <a href="#contact" class="btn">Записаться</a>
+      </div>
+      <div class="price">
+        <h3>IELTS / TOEFL</h3>
+        <div class="amt">от 51 000 ₸<small></small></div>
+        <div class="per">в месяц · от 8 занятий по 60–90 минут</div>
+        <ul><li>Подготовка ко всем секциям</li><li>Пробные экзамены</li><li>Стратегии на балл</li></ul>
+        <a href="#contact" class="btn">Записаться</a>
+      </div>
+    </div>
+    <p class="note">Онлайн-формат доступен для всех программ. Книги приобретаются отдельно.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-text">
+      <h2>Записаться на занятия</h2>
+      <p>Оставьте заявку — мы подберём формат и удобное время, ответим на вопросы и запишем на пробный урок.</p>
+      <div class="info">
+        <div class="info-row">
+          <div class="ic">📍</div>
+          <div><b>Адрес</b><span>г. Алматы, ул. Розыбакиева, 150</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">📞</div>
+          <div><b>Телефон</b><a href="tel:+7">+7 ___ ___ __ __</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">🕘</div>
+          <div><b>Часы работы</b><span>Пн–Сб, 9:00 – 21:00</span></div>
+        </div>
+      </div>
+    </div>
+    <form id="form">
+      <label for="name">Имя</label>
+      <input id="name" type="text" placeholder="Как вас зовут" required>
+      <label for="phone">Телефон</label>
+      <input id="phone" type="tel" placeholder="+7 ___ ___ __ __" required>
+      <label for="fmt">Формат обучения</label>
+      <select id="fmt">
+        <option>Индивидуальные</option>
+        <option>Групповые</option>
+        <option>Онлайн</option>
+        <option>Подготовка к IELTS / TOEFL</option>
+      </select>
+      <button type="submit" class="btn">Отправить заявку</button>
+      <div class="form-ok" id="ok">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#" class="brand">Alm<span style="color:var(--amber)">Ang</span></a>
+    <small>г. Алматы, ул. Розыбакиева, 150 · +7 ___ ___ __ __</small>
+    <small>© 2026 АлмАнг. Школа английского языка.</small>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  document.getElementById('form').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('ok').style.display='block';
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
